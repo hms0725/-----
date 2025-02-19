@@ -997,6 +997,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   background-color: #000000;
 }
 
@@ -1004,7 +1005,7 @@ body {
   width: 430px;
   background-color: white;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 }
 .tournament-wrapper {
@@ -1143,13 +1144,13 @@ body {
   .bottom-nav {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
-	max-width: 375px;
+	width: 430px;
 	display: flex;
 	justify-content: space-around;
 	background: white;
 	padding: 10px 0;
 	border-top: 1px solid #ddd;
+	z-index: 9999;
   }
 
   .bottom-nav .item {
@@ -1271,12 +1272,33 @@ body {
 	  </div>
   
 	  <div class="bottom-nav">
-		<div class="item"><img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/home.svg" alt="홈"></div>
-		<div class="item"><img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/search.svg" alt="검색"></div>
-		<div class="item"><img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/like.svg" alt="즐겨찾기"></div>
-		<div class="item"><img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/wallet.svg" alt="내지갑"></div>
-		<div class="item"><img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/my.svg" alt="마이페이지"></div>
-	  </div>
+		<div class="item">
+			<a href="https://runnerrunner.co.kr/home">
+				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/home.svg" alt="홈">
+			</a>
+		</div>
+		<div class="item">
+			<a href="https://runnerrunner.co.kr/search?lat=37.49648606&lng=127.02836155&z=13&filter=%7B%22sort%22%3A%22distance%22%7D">
+				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/search.svg" alt="검색">
+			</a>
+		</div>
+		<div class="item">
+			<a href="https://runnerrunner.co.kr/login">
+				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/like.svg" alt="즐겨찾기">
+			</a>
+		</div>
+		<div class="item">
+			<a href="https://runnerrunner.co.kr/login">
+				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/wallet.svg" alt="내지갑">
+			</a>
+		</div>
+		<div class="item">
+			<a href="https://runnerrunner.co.kr/login">
+				<img src="/runnerrunner.co.kr/image-web/bottom-nav.renewal/my.svg" alt="마이페이지">
+			</a>
+		</div>
+	</div>
+	
 	</div>
   
 	<script>
