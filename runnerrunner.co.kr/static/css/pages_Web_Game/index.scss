@@ -1,0 +1,20 @@
+.fix-centered{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .absolute-centered{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @keyframes twinkle { 
+    from { 
+        opacity: 0.8;
+    }
+    to { 
+        opacity: 1;
+    }
+ }

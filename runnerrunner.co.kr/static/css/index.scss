@@ -1,0 +1,225 @@
+@import url("./pretendard-subset.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'yg-jalnan';
+  font-display: swap;
+  src: url('./fonts/Jalnan2TTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vina Sans";
+  font-weight: 100;
+  font-display: swap;
+  src: url("./woff2-subset/VinaSans-Regular.ttf") format("truetype"),
+    url("./woff-subset/VinaSans-Regular.ttf") format("truetype");
+}
+
+html {
+  height: -webkit-fill-available;
+  background: #202020;
+  @media screen and (max-width: 768px) {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  overscroll-behavior: none;
+  -webkit-text-size-adjust:none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+//noinspection ALL
+body {
+  min-width: 320px;
+  min-height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto !important;
+  padding: 0 !important;
+  position: relative;
+  background: #202020;
+  // padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+
+  --status-bar-height: constant(safe-area-inset-top);
+  --status-bar-height: env(safe-area-inset-top);
+  --bottom-bar-height: constant(safe-area-inset-bottom);
+  --bottom-bar-height: env(safe-area-inset-bottom);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: -0.02em;
+  line-height: normal;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+select {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: inherit;
+  }
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+
+  dt {
+    margin: 0;
+    padding: 0;
+  }
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  appearance: none;
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 100% inherit;
+  vertical-align: baseline;
+}
+
+.loading-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.global-loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #6436E7;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin text-overflow($lines) {
+  @content;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+.notistack-SnackbarContainer{
+  z-index: 2147483647 !important;
+}
+
+.title{
+  pointer-events: none;
+}
+
+.icon{
+  pointer-events: none;
+}
+
+html{
+  position: relative;
+  max-width: 480px;
+  left:50%;
+  transform: translateX(-50%);
+}
