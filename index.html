@@ -1002,58 +1002,104 @@ body {
 }
 
 #root {
-  width: 430px;
+  width: 480px;
   background-color: white;
   min-height: 100vh;
   overflow: auto;
   position: relative;
 }
+
 .tournament-wrapper {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.tournament-content {
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
 }
 
 .tournament-back {
   width: 100%;
-  border-radius: 10px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
 }
-.gtd, .title, .description, .button {
+
+.tournament-wrapper .trophy-img {
+  width: 140px;
+  height: auto;
   position: absolute;
-  left: 40%;
-  transform: translateX(-50%);
+  left: 400px;
+  top: 30px;
+}
+
+.gtd,
+.title,
+.description,
+.button {
+  position: absolute;
+  left: 10px;
   margin: 0;
   color: #fff;
 }
 
 .gtd {
-	top: 10%;
-	font-display: swap;
-    font-family: Vina Sans;
-    font-weight: 100;
-    src: url(/static/css/main.9bc66ff7.css) format("truetype"),url(/static/media/VinaSans-Regular.a3809b80da4207531e33.ttf) format("truetype")
+  top: 10%;
+  font-family: Vina Sans;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 34px;
+  color: #f9ca0f;
+  src: url(/static/css/main.9bc66ff7.css) format("truetype"),
+       url(/static/media/VinaSans-Regular.a3809b80da4207531e33.ttf) format("truetype");
 }
+
 .title {
   top: 30%;
   font-size: 15px;
   font-weight: bold;
+  color: #f9ca0f;
+  margin-bottom: 50px;
+  
 }
 
 .description {
+  margin-top: 30px;
   top: 40%;
-  font-size: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
 }
 
 .button {
-  top: 70%;
-  background-color: #4218e9c8;
-  padding: 10px 20px;
+  top: 75%;
+  background-color: #8512ffd3;
+  padding: 10px 25px;  
   color: #fff;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px; 
+  font-family: 'Arial', sans-serif;  
+  font-weight: 600;  
+  font-size: 15px;  
+  text-align: center;
+  display: inline-block;  
+  min-width: 120px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;  
+}
+
+.button:hover {
+  background-color: #3700b3;  
+  transform: translateY(-2px);  
+}
+
+.button:active {
+  transform: translateY(0);  
 }
 
 .trophy-img {
@@ -1067,113 +1113,143 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateX(-50%) translateY(0px); }
-  50% { transform: translateX(-50%) translateY(-10px); }
-  100% { transform: translateX(-50%) translateY(0px); }
+  0% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
 }
-  .banner-swiper-wrapper {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-  }
 
-  .swiper {
-	display: flex;
-	width: 100%;
-  }
+.banner-swiper-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
-  .swiper-wrapper {
-	display: flex;
-	transition: transform 0.3s ease-in-out;
-  }
+.swiper {
+  display: flex;
+  width: 100%;
+}
 
-  .swiper-slide {
-	flex-shrink: 0;
-	width: 100%;
-  }
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
 
-  .swiper-slide img {
-	width: 100%;
-	border-radius: 10px;
-  }
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
 
-  .progress-dots {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-  }
+.swiper-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 10px;
+}
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-  .dot {
-	width: 8px;
-	height: 8px;
-	margin: 0 5px;
-	background-color: #ccc;
-	border-radius: 50%;
-  }
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
 
-  .dot.active {
-	background-color: #000;
-  }
+.dot.active {
+  background-color: #000;
+}
 
-  .menus {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 10px;
-	padding: 10px;
-	background: white;
-  }
+.menus {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background: white;
+}
 
-  .item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-  }
+.menus .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .item img {
-	width: 50px;
-	height: 50px;
-  }
+.menus .item img {
+  background-color: #f0f0f0;
+  padding: 9px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
 
-  .tournament-back {
-	width: 100%;
-	margin-top: 20px;
-	border-radius: 10px;
-  }
+.menus .item span {
+  display: block;
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; 
+  color: #000;
+}
 
-  .bottom-nav {
-	position: fixed;
-	bottom: 0;
-	width: 430px;
-	display: flex;
-	justify-content: space-around;
-	background: white;
-	padding: 10px 0;
-	border-top: 1px solid #ddd;
-	z-index: 9999;
-  }
+.menus .item a {
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 글자 두껍게 */
+}
+.tournament-back {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
 
-  .bottom-nav .item {
-	text-align: center;
-  }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 480px;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  z-index: 9999;
+}
 
-  .bottom-nav img {
-	width: 30px;
-	height: 30px;
-  }
-  .menus .item {
-    text-align: center;
-  }
+.bottom-nav .item {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #313131;
+}
 
-  .menus .item img {
-    display: block; 
-    margin: 0 auto 8px; 
-  }
+.bottom-nav .item span {
+  margin-top: 4px;
+  font-size: 10px;
+}
 
-  .menus .item span {
-    display: block;
-    font-size: 14px; 
-  }
+.bottom-nav img {
+  width: 30px;
+  height: 30px;
+}
+
+
 </style>
 </head>
 <body>
@@ -1183,16 +1259,19 @@ body {
 			  <div class="swiper-wrapper">
 				<div class="swiper-slide">
 				  <a href="https://runnerrunner.co.kr/event/list" target="_blank">
+					<div class="image-overlay"></div>
 					<img src="https://dfesoodpx4jgd.cloudfront.net/events/main-1.jpg" alt="배너">
 				  </a>
 				</div>
 				<div class="swiper-slide">
 				  <a href="https://runnerrunner.co.kr/event/detail/12" target="_blank">
+					<div class="image-overlay"></div>
 					<img src="https://dfesoodpx4jgd.cloudfront.net/events/banner2.jpg" alt="배너">
 				  </a>
 				</div>
 				<div class="swiper-slide">
 				  <a href="https://runnerrunner.co.kr/event/detail/12" target="_blank">
+					<div class="image-overlay"></div>
 					<img src="https://dfesoodpx4jgd.cloudfront.net/events/main-3..jpg" alt="배너">
 				  </a>
 				</div>
@@ -1204,6 +1283,7 @@ body {
 			  <div class="dot"></div>
 			</div>
 		  </div>
+		  
 		  
   
 	  <div class="menus">
@@ -1270,34 +1350,34 @@ body {
 		</div>
 		<img class="trophy-img" src="runnerrunner.co.kr/image-web/game/trophy.png" alt="트로피">
 	  </div>
-  
 	  <div class="bottom-nav">
-		<div class="item">
-			<a href="https://runnerrunner.co.kr/home">
-				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/home.svg" alt="홈">
-			</a>
+		<div class="home-item">
+		  <a href="https://runnerrunner.co.kr/home">
+			<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/home.svg" alt="홈">
+		  </a>
 		</div>
 		<div class="item">
-			<a href="https://runnerrunner.co.kr/search?lat=37.49648606&lng=127.02836155&z=13&filter=%7B%22sort%22%3A%22distance%22%7D">
-				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/search.svg" alt="검색">
-			</a>
+		  <a href="https://runnerrunner.co.kr/search?lat=37.49648606&lng=127.02836155&z=13&filter=%7B%22sort%22%3A%22distance%22%7D">
+			<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/search.svg" alt="검색">
+		  </a>
 		</div>
 		<div class="item">
-			<a href="https://runnerrunner.co.kr/login">
-				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/like.svg" alt="즐겨찾기">
-			</a>
+		  <a href="https://runnerrunner.co.kr/login">
+			<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/like.svg" alt="즐겨찾기">
+		  </a>
 		</div>
 		<div class="item">
-			<a href="https://runnerrunner.co.kr/login">
-				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/wallet.svg" alt="내지갑">
-			</a>
+		  <a href="https://runnerrunner.co.kr/login">
+			<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/wallet.svg" alt="내지갑">
+		  </a>
 		</div>
 		<div class="item">
-			<a href="https://runnerrunner.co.kr/login">
-				<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/my.svg" alt="마이페이지">
-			</a>
+		  <a href="https://runnerrunner.co.kr/login">
+			<img src="runnerrunner.co.kr/image-web/bottom-nav.renewal/my.svg" alt="마이페이지">
+		  </a>
 		</div>
-	</div>
+	  </div>
+	  
 	
 	</div>
   
@@ -1319,6 +1399,7 @@ body {
 	  }
   
 	  setInterval(nextSlide, 3000);
-	</script>
+	</script>  
+	  
   </body>
 </html>
